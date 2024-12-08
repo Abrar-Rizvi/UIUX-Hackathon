@@ -1,6 +1,6 @@
 import Heroshop from '@/components/shopsSection'
 import Shopcards from '@/components/Shopcards'
-import Policy from '@/components/policy'
+import Policy from '@/components/Policy'
 
 
 const Shoppage = () => {
