@@ -25,7 +25,7 @@ const Feature = () => {
     {
       name: "Side table",
       secondName: "View More",
-      href: "#",
+      href: "/shop",
        src: img1,
       id: 1
       
@@ -33,7 +33,7 @@ const Feature = () => {
     {
       name: "Side table",
       secondName: "View More",
-      href: "#",
+      href: "/shop",
       src: img2,
       id: 2
     }
@@ -41,15 +41,15 @@ const Feature = () => {
 
 
   return (
-    <div className='bg-[#FAF4F4] md:flex md:flex-row-reverse md:justify-around '>
+    <div className='bg-[#FAF4F4] md:flex md:flex-row-reverse md:justify-around md:pt-[50px]'>
       {featureItem.map((item) => {
-        return <div key={item.id} >
-          <div className="">
+        return <div key={item.id} className="relative">
+          <div className=" h-[80%] flex justify-center items-center"> 
           <Image src={item.src} alt="feature-image" width={300} height={300} 
           className="w-full h-full object-cover object-center"
           />
           </div>
-         <div className=" text-center  ">
+         <div className=" text-left   absolute top-[70%] left-[10%] md:top-[60%] md:left-[7%]">
          <h4 className={`${poppins.className} text-[25px] font-medium`}>{item.name}</h4>
           <Link href={item.href}
           className="underline "

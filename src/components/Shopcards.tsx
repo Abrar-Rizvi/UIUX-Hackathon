@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Poppins } from 'next/font/google'
+
 
 const poppins = Poppins(
     {
@@ -80,8 +82,9 @@ const Shopcards = () => {
 
     <div className='flex  gap-2 flex-col justify-center flex-wrap items-center md:p-[30px] md:flex md:flex-row md:justify-center md:items-center'>
       {products.map((product) => {
-            return <div key={product.id} className='flex  flex-col justify-center items-center md:w-[287px]
-            md:h-[372px]
+            return <Link key={product.id} href={`/shop/${product.id}`}>
+                <div key={product.id} className='flex  flex-col justify-center items-center cursor-pointer md:w-[287px]
+            md:h-[372px] transform transition-transform duration-300 hover:scale-110
             '>
                 <Image 
                 src={product.src} alt='top-pic' width={300} height={300}
@@ -94,6 +97,8 @@ const Shopcards = () => {
                 </div>
                 
             </div>
+            </Link>
+          
         })}
       </div>
       <div className="flex justify-center mt-[50px] gap-10 items-center">

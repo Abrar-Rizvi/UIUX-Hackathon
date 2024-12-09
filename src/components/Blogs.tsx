@@ -74,7 +74,7 @@ const Blogs = () => {
                         <div className='text-center'>
                             <p className='md:text-[16px] font-normal mb-[5px]'>{blog.description}</p>
                             <div className='mb-[10px] '>
-                                <Link href="#" className={`text-[20px] font-semibold border-b-2 border-b-[#000000]`}>Read More</Link>
+                                <Link href="/blog" className={`text-[20px] font-semibold border-b-2 border-b-[#000000]`}>Read More</Link>
                             </div>
                             <div className='icons space-x-2 flex justify-center items-center '>
 
@@ -86,23 +86,23 @@ const Blogs = () => {
 
                                 {/* For date */}
                                 <div className='flex space-x-2 items-center'>
-                                    <AiOutlineCalendar  className='' />
+                                    <AiOutlineCalendar className='' />
                                     <span className='text-[16px]'>{blog.date}</span>
                                 </div>
 
-            
+
 
                             </div>
                         </div>
                     </div>
                 })}
             </div>
-                                {/* link */}
-                                <div className=' mx-auto mt-[30px] border-b-2 border-b-[#000000]  pb-[6px] w-[115px] h-[49px]  
+            {/* link */}
+            <div className=' mx-auto mt-[30px] border-b-2 border-b-[#000000]  pb-[6px] w-[115px] h-[49px]  
       flex justify-center items-center
       '>
-        <Link href="#"  className={`${poppins.className} text-20px font-semibold`}>View All Post</Link>
-      </div>
+                <Link href="/blog" className={`${poppins.className} text-20px font-semibold`}>View All Post</Link>
+            </div>
         </div>
     )
 }

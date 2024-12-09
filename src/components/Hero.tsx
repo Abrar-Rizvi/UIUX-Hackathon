@@ -18,7 +18,7 @@ const Hero = () => {
    
   return (
     <div className=' bg-[#FBEBB5] text-heroTextColor flex flex-col-reverse justify-center items-center md:flex md:flex-row md-justify-center md:items-center
-    px-[30px] 
+    px-[30px]  pb-[50px] md:pb-[0px]
     '>
         <div className="text px-8 md:pl-[70px]">
             <h1 className={`${poppins.className} text-[38px] md:text-[64px] md:font-medium `}>Rocket single seater</h1>

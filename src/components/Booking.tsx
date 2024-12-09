@@ -31,7 +31,9 @@ const Booking = () => {
         <p className="md:text-[24px] text-[15px] font-medium ">New Arrivals</p>
         <h1 className="font-bold text-[20px] md:text-[48px] md:mb-[20px]">Asgaard sofa</h1>
         {/* <Link href="#" className="text-[20px] font-normal  px-[50px] py-[20px] bg-yellow-400 border-1 border-[#000000]">Order Now</Link> */}
-      <button  className="text-[20px] font-normal mt-[15px] px-8 py-2  md:w-[255px] md:h-[64px] border-1 border-[#000000]">Order Now</button>
+      <button  className="text-[20px] font-normal mt-[15px] px-8 py-2  md:w-[255px] md:h-[64px] border-1 border-[#000000]
+      transform transition-transform duration-300 hover:scale-110
+      ">Order Now</button>
       </div>
     </div>
   )

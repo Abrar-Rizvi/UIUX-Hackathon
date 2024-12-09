@@ -3,11 +3,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { FiHeart, FiSearch, FiUserCheck } from "react-icons/fi";
 import { LuShoppingCart } from "react-icons/lu";
+import { useRouter } from 'next/navigation'
 
 interface HeaderprosT {
     isHomePage: boolean
 }
 const Header = (props: HeaderprosT ) => {
+    const router = useRouter()
     //creating type for navigation items
     interface NavigationT {
         name: string;
@@ -27,7 +29,7 @@ const Header = (props: HeaderprosT ) => {
         },
         {
             name: "About",
-            href: "/about",
+            href: "#",
             id: 3
         },
         {
@@ -86,20 +88,22 @@ const Header = (props: HeaderprosT ) => {
                 </ul>
             </nav>
 
-            <div className="design-cart flex gap-5 p-[36px]">
-            <FiUserCheck />
-            <FiSearch />
-            <FiHeart />
-            <LuShoppingCart />
+            <div className="design-cart flex gap-5 p-[36px] ">
+            <FiUserCheck onClick={() => router.push('/my-page')}
+            className="cursor-pointer"
+            />
+            <FiSearch    className="cursor-pointer"/>
+            <FiHeart    className="cursor-pointer"/>
+            <LuShoppingCart   className="cursor-pointer"/>
             
             </div>
+
+    
         </header>
     )
 }
 
 export default Header
-
-
 
 
 
