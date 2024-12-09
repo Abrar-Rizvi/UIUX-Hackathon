@@ -80,7 +80,7 @@ const Shopcards = () => {
 
     <div className='flex  gap-2 flex-col justify-center flex-wrap items-center md:p-[30px] md:flex md:flex-row md:justify-center md:items-center'>
       {products.map((product) => {
-            return <div key={product.id} className='   flex  flex-col justify-center items-center md:w-[287px]
+            return <div key={product.id} className='flex  flex-col justify-center items-center md:w-[287px]
             md:h-[372px]
             '>
                 <Image 

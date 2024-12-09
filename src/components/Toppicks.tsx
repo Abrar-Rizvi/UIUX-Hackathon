@@ -52,7 +52,7 @@ const Toppicks = () => {
   return (
     <div className='main-container py-[50px]'>
         <div className={`heading-para font-medium  text-center ${poppins.className}`} >
-            <h2 className={` text-[36px] md:m-[10px]`}>Top Picks For You</h2>
+            <h2 className={` text-[36px] md:m-[10px]`}>Get In Touch With Us</h2>
             <p className='text-[16px] text-[#9F9F9F]'>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</p>
         </div>
       <div className='flex flex-col justify-center items-center md:p-[30px] md:flex md:flex-row md:justify-center md:items-center'>

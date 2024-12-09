@@ -17,7 +17,7 @@ const Header = (props: HeaderprosT ) => {
     const navigationItems: NavigationT[] = [
         {
             name: "Home",
-            href: "#",
+            href: "/",
             id: 1
         },
         {
@@ -27,12 +27,12 @@ const Header = (props: HeaderprosT ) => {
         },
         {
             name: "About",
-            href: "#",
+            href: "/about",
             id: 3
         },
         {
             name: "Contact",
-            href: "#",
+            href: "/contact",
             id: 4
         },
     ]
