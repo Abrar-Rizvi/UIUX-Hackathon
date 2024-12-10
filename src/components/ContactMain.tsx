@@ -1,23 +1,36 @@
+"use client"
 // import Image from "next/image"
 import { Poppins } from 'next/font/google'
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
+// import { usePathname } from "next/navigation";
 
-const poppins = Poppins(
-    {
-        subsets: ['latin'],
-        weight: "400",
-        display: "swap"
+// const poppins = Poppins(
+//     {
+//         subsets: ['latin'],
+//         weight: "400",
+//         display: "swap"
 
-    }
-)
+//     }
+// )
 
 
 const ContactMain = () => {
+    // const pathname = usePathname();
     return (
         <>
-        <div className={`${poppins.className} md:h-[313px] bg-[url('/Rectangle-shop.png')] bg-cover bg-center`}>
-             </div>
+        {/* <div className={`${poppins.className} md:h-[313px] bg-[url('/Rectangle-shop.png')] bg-cover bg-center
+        flex justify-center items-center
+        `}>
+       <div className="flex flex-col justify-center items-center">
+       <Image src="/contact-rectangle.png" alt='image' width={200} height={200} 
+         className='w-[180px] h-[121px]'
+        />
+        {pathname === '/contact' && (
+            <p><span className='font-bold'>Home {'>'}</span>Contact</p>
+        )}
+       </div>
+             </div> */}
 
             <div className="text-center flex flex-col justify-center items-center">
                 <h1 className="text-[36px] font-bold">Get In Touch With Us</h1>
