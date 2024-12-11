@@ -46,6 +46,10 @@ const Header = (props: HeaderprosT ) => {
         setNavOpen(!isNavOpen)
        
     }
+    
+    const closeMenu = () => { 
+        setNavOpen(false)
+    }
     return (
         <header className={`${props.isHomePage ? 'bg-[#FBEBB5]' : ''} flex justify-between md:flex md:justify-end md:h-[100px]`}>
             {/* hamburger btn */}
@@ -76,11 +80,12 @@ const Header = (props: HeaderprosT ) => {
 
             {/* navigation link */}
             <nav className={`navigationItems  md:block absolute top-[10%]    h-screen md:h-0 z-10 md:static    ${isNavOpen ? 'translate-y-0 w-full' : ' -translate-x-full  '}  md:translate-x-0 md:translate-y-0  md:transform-none transition-transform duration-500 ease-in-out`}>
-                <ul className="flex flex-col  md:flex w-64 md:w-auto md:flex-row  md:justify-center md:items-center gap-x-8 gap-y-8 font-bold ">
+                <ul className="flex flex-col bg-[#202426] h-screen md:h-auto md:bg-transparent w-full  md:flex md:w-auto md:flex-row  md:justify-center md:items-center gap-x-8 gap-y-8 font-bold ">
                     {navigationItems.map((item) => {
                         return <li key={item.id} className=" md:border-none p-[36px]">
                             <Link href={item.href}
-                            className={`text-heroTextColor`}
+                            className={`text-[#FBEBB5] md:text-heroTextColor`}
+                            onClick={ closeMenu }
                             >{item.name}</Link>
                         </li>
                     })}
@@ -94,7 +99,9 @@ const Header = (props: HeaderprosT ) => {
             />
             <FiSearch    className="cursor-pointer"/>
             <FiHeart    className="cursor-pointer"/>
-            <LuShoppingCart   className="cursor-pointer"/>
+            <LuShoppingCart   className="cursor-pointer"
+            onClick={() => router.push('/checkout')}
+            />
             
             </div>
 

@@ -18,7 +18,8 @@ const config: Config = {
         
       },
       borderWidth: {
-        1: "1px"
+        1: "1px",
+        0.5: "0.5px"
       }
     },
   },

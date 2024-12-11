@@ -3,18 +3,27 @@
 @tailwind utilities;
 
 input{
-    width: 100%;
+    /* width: 100%; */
     padding: 15px 25px;
     border-radius: 7px;
-    margin: 0px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
     border: 1px solid black;
     outline: none;
 }
 textarea{
-    width: 100%;
-    padding: 15px 25px;
+    /* width: 100%; */
+    padding: 10px 25px;
     border-radius: 7px;
     outline: none;
     border: 1px solid black;
 
+}
+.margin{
+    margin: 15px 0px;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

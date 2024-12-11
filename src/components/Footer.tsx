@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className='md:h-[555px]  pt-[80px] pb-[60px] px-[70px]
+            <div className='md:h-[330px]  pt-[10px] pb-[60px] px-[70px]
          
         '>
 
