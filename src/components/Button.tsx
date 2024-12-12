@@ -1,11 +1,11 @@
 
 interface ButtonI {
-  children: string;
+  content: string;
   classname: string;
 }
-const Button = ({children, classname}: ButtonI) => {
+const Button = ({content, classname}: ButtonI) => {
   return (
-    <div className={`${classname}`}>{children}</div>
+    <div className={`${classname}`}>{content}</div>
   )
 }
 

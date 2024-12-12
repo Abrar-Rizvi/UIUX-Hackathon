@@ -66,7 +66,7 @@ const HeroCart = () => {
             </div>
           </ul>
           <div className=' flex justify-center'>
-            <Button children="Check Out"
+            <Button content="Check Out"
               classname="w-[180px] h-[55px] flex justify-center items-center border-1 border-black rounded-[15px] text-[18px] cursor-pointer" />
           </div>
         </div>

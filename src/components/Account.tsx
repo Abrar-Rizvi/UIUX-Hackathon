@@ -18,7 +18,7 @@ const Account = () => {
     <div>
       <div>
 
-        <div className={`${poppins.className}   w-full mx-auto text-left 
+        <div className={`${poppins.className}w-full mx-auto text-left 
           p-[50px] flex flex-col`}>
           <form action="" className=" w-full  p-[50px] flex flex-col lg:flex lg:flex-row lg:justify-between
           
@@ -46,21 +46,9 @@ const Account = () => {
                 <label htmlFor="checkbox" className="ml-[20px]">Remember Me</label>
               </div>
 
-           
-                <Button children="Log In"
-                  classname="w-[180px] h-[55px] flex justify-center items-center border-1 border-black rounded-[15px] text-[18px] cursor-pointer" />
 
-
-             
-
-
-
-
-
-
-
-
-
+              <Button content="Log In"
+                classname="w-[180px] h-[55px] flex justify-center items-center border-1 border-black rounded-[15px] text-[18px] cursor-pointer" />
 
             </div>
             <div className="right  mt-[50px] lg:mt-0 lg:max-w-[45%] w-full">
@@ -78,18 +66,10 @@ const Account = () => {
                 <p className="margin">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span className="font-bold">privacy policy.</span></p>
               </div>
 
-              <Button children="Register"
+              <Button content="Register"
                 classname="w-[180px] h-[55px] flex justify-center items-center rounded-[15px]
                  text-[18px] mt-5 border-1 border-black cursor-pointer"  />
             </div>
-
-
-
-
-           
-
-
-
           </form>
 
           <Policy />
@@ -101,3 +81,23 @@ const Account = () => {
 }
 
 export default Account
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
