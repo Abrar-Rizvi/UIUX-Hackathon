@@ -62,12 +62,12 @@ const Blogs = () => {
 
     ]
     return (
-        <div className={`${poppins.className} py-[50px] `}>
-            <h2 className={` text-[36px] md:m-[10px] text-center`}>Our Blogs</h2>
-            <p className='text-[16px] text-[#9F9F9F] text-center'>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</p>
+        <div className={`${poppins.className} py-[30px] `}>
+            <h2 className={` text-[36px] m-[5px] text-center`}>Our Blogs</h2>
+            <p className='text-[16px] text-[#9F9F9F] mb-[20px] text-center'>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</p>
             <div className='flex flex-col justify-center items-center md:p-[30px] md:flex md:flex-row md:justify-center md:items-center space-y-10 md:space-y-0 md:space-x-5'>
                 {blogs.map((blog) => {
-                    return <div key={blog.id} className='md:w-[393px]'>
+                    return <div key={blog.id} className=' w-[80%] md:w-[393px]'>
                         <Image src={blog.src} alt='blog-images' width={300} height={300}
                             className='mb-[20px] w-full'
                         />
