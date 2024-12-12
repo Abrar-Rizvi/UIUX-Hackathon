@@ -50,7 +50,7 @@ const CheckoutDetails = () => {
                 </p>
             </div>
            <div className="flex justify-center  max-w-[500px]">
-           <Button children="Log In"
+           <Button content="Log In"
                 classname="w-[180px] h-[55px] flex justify-center items-center border-1 border-black rounded-[15px] text-[18px] cursor-pointer " />
            </div>
         </div>
