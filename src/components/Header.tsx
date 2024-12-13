@@ -4,11 +4,13 @@ import { useState } from "react";
 import { FiHeart, FiSearch, FiUserCheck } from "react-icons/fi";
 import { LuShoppingCart } from "react-icons/lu";
 import { useRouter } from 'next/navigation'
+// import ShopingCart from "./ShopingCart";
 
 interface HeaderprosT {
-    isHomePage: boolean
+    isHomePage: boolean;
+    onclick: () => void;
 }
-const Header = (props: HeaderprosT ) => {
+const Header = (props: HeaderprosT) => {
     const router = useRouter()
     //creating type for navigation items
     interface NavigationT {
@@ -44,37 +46,37 @@ const Header = (props: HeaderprosT ) => {
 
     const clickHandle = () => {
         setNavOpen(!isNavOpen)
-       
+
     }
-    
-    const closeMenu = () => { 
+  
+
+   
+
+    const closeMenu = () => {
         setNavOpen(false)
     }
     return (
         <header className={`${props.isHomePage ? 'bg-[#FBEBB5]' : ''} flex justify-between md:flex md:justify-end md:h-[100px]`}>
             {/* hamburger btn */}
             <button
-        onClick={clickHandle}
-        className="md:hidden lg:hidden flex items-center"
-      >
-        <div className="w-9 h-14 cursor-pointer flex flex-col items-center justify-center">
-          <div
-            className={`w-[50%] h-[2px] bg-[#202426] rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] ${
-                isNavOpen ? "rotate-[-45deg]" : ""
-            }`}
-          ></div>
-          <div
-            className={`w-[50%] h-[2px] bg-[#202426] rounded-md transition-all duration-300 origin-center ${
-                isNavOpen ? "hidden" : ""
-            }`}
-          ></div>
-          <div
-            className={`w-[50%] h-[2px] bg-[#202426] rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] ${
-              isNavOpen ? "rotate-[45deg]" : ""
-            }`}
-          ></div>
-        </div>
-      </button>
+                onClick={clickHandle}
+                className="md:hidden lg:hidden flex items-center"
+            >
+                <div className="w-9 h-14 cursor-pointer flex flex-col items-center justify-center">
+                    <div
+                        className={`w-[50%] h-[2px] bg-[#202426] rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] ${isNavOpen ? "rotate-[-45deg]" : ""
+                            }`}
+                    ></div>
+                    <div
+                        className={`w-[50%] h-[2px] bg-[#202426] rounded-md transition-all duration-300 origin-center ${isNavOpen ? "hidden" : ""
+                            }`}
+                    ></div>
+                    <div
+                        className={`w-[50%] h-[2px] bg-[#202426] rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] ${isNavOpen ? "rotate-[45deg]" : ""
+                            }`}
+                    ></div>
+                </div>
+            </button>
 
 
 
@@ -84,8 +86,8 @@ const Header = (props: HeaderprosT ) => {
                     {navigationItems.map((item) => {
                         return <li key={item.id} className=" md:border-none p-[36px]">
                             <Link href={item.href}
-                            className={`text-[#FBEBB5] md:text-heroTextColor`}
-                            onClick={ closeMenu }
+                                className={`text-[#FBEBB5] md:text-heroTextColor`}
+                                onClick={closeMenu}
                             >{item.name}</Link>
                         </li>
                     })}
@@ -94,19 +96,24 @@ const Header = (props: HeaderprosT ) => {
             </nav>
 
             <div className="design-cart flex gap-5 p-[36px] ">
-            <FiUserCheck onClick={() => router.push('/my-page')}
-            className="cursor-pointer"
-            />
-            <FiSearch    className="cursor-pointer"/>
-            <FiHeart    className="cursor-pointer"/>
-            <LuShoppingCart   className="cursor-pointer"
-            onClick={() => router.push('/checkout')}
-            />
-            
-            </div>
+                <FiUserCheck onClick={() => router.push('/my-page')}
+                    className="cursor-pointer"
+                />
+                <FiSearch className="cursor-pointer" />
+                <FiHeart className="cursor-pointer" />
+                <LuShoppingCart className="cursor-pointer"
+                    onClick={props.onclick}
+                />
 
-    
+
+
+            </div>
+           
+
+
+
         </header>
+
     )
 }
 

@@ -1,13 +1,17 @@
 import Image from "next/image"
 
+
 import { TbShoppingBagX } from "react-icons/tb";
 
+interface  Prop {
+    condition: boolean
+}
+const ShopingCart = (props: Prop ) => {
 
-const ShopingCart = () => {
   
     return (
 
-        <div className="absolute right-0 top-[100px] w-[400px]  bg-white border border-gray-200 rounded-lg shadow-lg p-10 z-20">
+        <div className={`${props.condition ? 'block' : 'hidden'} absolute right-0 top-[100px] w-[400px]  bg-white border border-gray-200 rounded-lg shadow-lg p-10 z-20`}>
            <div className="flex justify-between items-center border-b border-[#D9D9D9] pb-5">
            <h2 className="text-lg font-bold mb-2">Shopping Cart</h2>
            <TbShoppingBagX  className="w-[20px] h-[20px]"/>

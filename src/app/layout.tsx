@@ -5,6 +5,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { usePathname } from 'next/navigation'; // Import usePathname from next/navigation
+import ShopingCart from "@/components/ShopingCart";
+import { useState } from "react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,11 +23,18 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname(); // Get the current pathname
   const isHomePage = pathname === '/'; // Check if it's the home page
+  const [isOpenCart, setIsOpenCart] = useState(false);
+
+  const handleCart = () => {
+      setIsOpenCart(!isOpenCart)
+  }
+
   
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Header isHomePage={isHomePage}/>
+      <Header isHomePage={isHomePage} onclick={handleCart}/>
+      <ShopingCart condition={isOpenCart} />
         {children}
         <Footer />
         </body>
