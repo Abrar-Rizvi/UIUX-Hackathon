@@ -1,4 +1,4 @@
-import ShopingCart from '@/components/ShopingCart'
+
 import React from 'react'
 
 const Aboutpage = () => {

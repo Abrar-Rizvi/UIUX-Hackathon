@@ -86,7 +86,7 @@ const Dynamicpage = async ({ params }: any) => {
             </section>
         </div>
         <Descriptive />
-        <ShopingCart />
+        {/* <ShopingCart /> */}
         </>
     );
 };
