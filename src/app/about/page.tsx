@@ -5,7 +5,7 @@ const Aboutpage = () => {
   return (
     <div>
 <h1>AboutPage</h1>
-<ShopingCart />
+
 
 
     </div>
