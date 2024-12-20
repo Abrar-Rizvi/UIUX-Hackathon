@@ -5,7 +5,7 @@
 import Image from "next/image";
 import { Poppins } from 'next/font/google';
 import Descriptive from "@/components/Descriptive";
-import ShopingCart from "@/components/ShopingCart";
+// import ShopingCart from "@/components/ShopingCart";
 const poppins = Poppins(
     {
         subsets: ['latin'],
