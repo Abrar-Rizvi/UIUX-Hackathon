@@ -8,7 +8,7 @@ const Recentpost = ({ src, detail }: any) => {
     return (
 
        
-        <div className=' flex  lg:max-w-[80%] h-[80px] bg-yellow-400'>
+        <div className=' flex  lg:max-w-[80%] h-[80px]'>
             
             {/* image div */}
             <div className="  lg:w-[50%]  rounded-xl bg-red-600">
